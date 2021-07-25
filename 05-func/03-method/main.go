@@ -28,3 +28,7 @@ func main() {
 func (p Person) speak() {
 	fmt.Printf("Hi, I am %s %s.\n", p.First, p.Last)
 }
+
+/*
+Hi, I am James Bond.
+*/
