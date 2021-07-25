@@ -19,11 +19,12 @@ func main() {
 			"You only live twice":   1967,
 		},
 	}
-	fmt.Println("Name:", p1.First, p1.Last)
+
+	fmt.Printf("Name: %s %s\nFavorite Flavors: ", p1.First, p1.Last)
 	for _, fl := range p1.FavoriteFlavors {
-		fmt.Printf("Favorite Flavors: %s,", fl)
+		fmt.Printf("%s, ", fl)
 	}
-	fmt.Println("\nMovieReleases:")
+	fmt.Println("\nMovie Releases:")
 	for k, v := range p1.MoviesReleases {
 		fmt.Printf("\t%d: %s\n", v, k)
 	}
