@@ -3,32 +3,32 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(calculate(add, 1, 2, 3, 4, 5))
-	fmt.Println(calculate(multiply, 1, 2, 3, 4, 5))
+	// Assign function to a variable
+	sum := printSum
+	sum(5, 10)
 
+	product := printProduct
+	product(5, 10)
+
+	// Return a function
+	sum = displaySum()
+	sum(10, 10)
 }
 
-func calculate(fn func(...int) int, x ...int) int {
-	return fn(x...)
+func printSum(a, b int) {
+	fmt.Println(a + b)
 }
 
-func add(x ...int) int {
-	var total int
-	for _, v := range x {
-		total += v
-	}
-	return total
+func printProduct(a, b int) {
+	fmt.Println(a * b)
 }
 
-func multiply(x ...int) int {
-	total := 1
-	for _, v := range x {
-		total *= v
-	}
-	return total
+func displaySum() func(int, int) {
+	return printSum
 }
 
 /*
 15
-120
+50
+20
 */
