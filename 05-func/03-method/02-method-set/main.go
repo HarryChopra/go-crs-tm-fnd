@@ -53,3 +53,11 @@ func main() {
 	printArea(r)
 	printArea(c)
 }
+
+/*
+Pointer receiver and pointer values:
+
+The area of square is:          25.00
+The area of rectangle is:       110.00
+The area of circle is:          95.57
+*/
