@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"example.com/greetings"
+	"example.com/go-crs-tm-fnd/01-basics/01-modules/greetings"
 )
 
 func main() {
